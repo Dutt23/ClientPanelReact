@@ -1,0 +1,11 @@
+// REACT-REDUX-FIREBASE demo
+
+first dependency to install
+sudo npm i redux react-redux react-redux-firebase redux-firestore firebase
+
+go to firebase.com , and click on add firebase to store and and copy api key and stuff
+
+impt tab for proptypes
+
+Fore firebase
+sudo npm i firebase --save --unsafe-perm
