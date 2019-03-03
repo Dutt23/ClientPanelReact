@@ -9,3 +9,6 @@ impt tab for proptypes
 
 Fore firebase
 sudo npm i firebase --save --unsafe-perm
+
+for auth
+npm i redux-auth-wrapper
