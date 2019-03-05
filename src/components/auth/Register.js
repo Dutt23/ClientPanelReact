@@ -16,12 +16,12 @@ class Register extends Component {
   };
   onChange = e => this.setState({ [e.target.name]: e.target.value });
 
-  componentWillMount()
-  {
-    const{allowRegistration} = this.props.settings;
+  componentWillMount() {
+    const { allowRegistration } = this.props.settings;
+    const { notifyUser } = this.props;
+    notifyUser("Registration is blocked", "error");
 
-    if(!allowRegistration)
-    this.props.history.push('/');
+    if (!allowRegistration) this.props.history.push("/");
   }
 
   onSubmit = e => {
