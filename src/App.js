@@ -5,6 +5,8 @@ import AddClient from "./components/clients/AddClient";
 import ClientDetails from "./components/clients/ClientDetails";
 import EditClient from "./components/clients/EditClient";
 import Login from "./components/auth/Login";
+import Register from "./components/auth/Register";
+import Settings from './components/settings/Settings'
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import {UserIsAuthenticated,UserIsNotAuthenticated} from './helpers/auth'
 import { Provider } from "react-redux";
@@ -21,7 +23,8 @@ class App extends Component {
             <div className="container">
               <Switch>
                 <Route exact path="/" component={UserIsAuthenticated(Dashboard)} />
-
+                <Route exact path="/settings" component={UserIsAuthenticated(Settings)} />
+                <Route exact path="/register" component={UserIsNotAuthenticated(Register)} />
                 <Route exact path="/login" component={UserIsNotAuthenticated(Login)} />
                 <Route exact path="/clients/add" component={UserIsAuthenticated(AddClient)} />
                 <Route exact path="/clients/:id" component={UserIsAuthenticated(ClientDetails)} />
